@@ -8,7 +8,7 @@ export class ChatboxController {
   constructor(private readonly chatboxService: ChatboxService) {}
 
   @Post()
-  create(@Body() createChatboxDto: CreateChatboxDto) {
+  create(@Body() createChatboxDto: CreateChatboxDto) {     
     return this.chatboxService.create(createChatboxDto);
   }
 

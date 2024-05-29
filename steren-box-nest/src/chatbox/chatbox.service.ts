@@ -12,8 +12,8 @@ export class ChatboxService {
     private chatProductsRepository: Repository<ChatboxProducts>,
   ){}
   
-  create(createChatboxDto: CreateChatboxDto) {
-    return 'This action adds a new chatbox';
+  async create(createChatboxDto: CreateChatboxDto) {
+    return await this.chatProductsRepository.save(createChatboxDto)
   }
 
   async findAll() {
